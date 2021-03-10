@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "@cr/app",
   "version": "0.0.1",
   "description": "Application for crash reporting",
   "author": "stdout-reach <nico.greco@outreach.io>",
@@ -18,7 +18,10 @@
     "url": "git+https://github.com/stdout-reach/crash-reporting.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "webpack --mode=production",
+    "build:dev": "webpack --mode=development",
+    "start": "webpack serve --config webpack.config.js --mode=development"
   },
   "bugs": {
     "url": "https://github.com/stdout-reach/crash-reporting/issues"
