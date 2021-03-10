@@ -4,13 +4,18 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "start": "yarn workspace @cr/app start"
+  },
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@material-ui/core": "^4.11.3",
     "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^5.3.1",
     "lerna": "^4.0.0",
+    "rollbar": "^2.21.0",
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
