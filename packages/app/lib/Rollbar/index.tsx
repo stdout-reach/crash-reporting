@@ -1,7 +1,7 @@
-import React from "react";
-import Rollbar from "rollbar";
+import React from 'react';
+import Rollbar from 'rollbar';
 
-import { Button } from "@material-ui/core";
+import { Button } from '@material-ui/core';
 
 const RollbarContext = React.createContext<Rollbar>(undefined);
 
@@ -13,7 +13,7 @@ export function useRollbar(): Rollbar {
   const rollbar = React.useContext(RollbarContext);
 
   if (!rollbar) {
-    throw new Error("useRollbar can only be used inside a RollbarProvider");
+    throw new Error('useRollbar can only be used inside a RollbarProvider');
   }
 
   return rollbar;
@@ -23,11 +23,11 @@ export default function RollbarProvider({
   children,
 }: PropsWithChildren): React.ReactElement {
   const rollbar = new Rollbar({
-    accessToken: "c934fda01afb41a796892b1c646c6b42",
+    accessToken: 'c934fda01afb41a796892b1c646c6b42',
     captureUncaught: true,
     captureUnhandledRejections: true,
     payload: {
-      environment: "development",
+      environment: 'development',
     },
   });
 
@@ -45,28 +45,28 @@ export function RollbarConsumer(): React.ReactElement {
     <>
       <Button
         onClick={() => {
-          rollbar.info("Crash Report: Test log");
+          rollbar.info('Crash Report: Test log');
         }}
       >
         Send Info
       </Button>
       <Button
         onClick={() => {
-          rollbar.warn("Test warn");
+          rollbar.warn('Test warn');
         }}
       >
         Send Warning
       </Button>
       <Button
         onClick={() => {
-          rollbar.error("Test error");
+          rollbar.error('Test error');
         }}
       >
         Send Error
       </Button>
       <Button
         onClick={() => {
-          throw new Error("Throw Test Error");
+          throw new Error('Throw Test Error');
         }}
       >
         Throw Error
