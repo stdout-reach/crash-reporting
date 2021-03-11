@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "start": "yarn workspace @cr/app start"
   },
   "devDependencies": {
