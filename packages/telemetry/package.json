@@ -1,11 +1,11 @@
 {
-  "name": "@cr/app",
+  "name": "@cr/telemetry",
   "version": "0.0.1",
-  "description": "Application for crash reporting",
+  "description": "Telemetry parser package for Rollbar Events",
   "author": "stdout-reach <nico.greco@outreach.io>",
   "homepage": "https://github.com/stdout-reach/crash-reporting#readme",
   "license": "ISC",
-  "main": "lib/app.js",
+  "main": "lib/telemetry.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -13,20 +13,17 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stdout-reach/crash-reporting.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "webpack --mode=production",
-    "build:dev": "webpack --mode=development",
-    "start": "webpack serve --config webpack.config.js --mode=development"
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/stdout-reach/crash-reporting/issues"
-  },
-  "dependencies": {
-    "@cr/telemetry": "^0.0.1"
   }
 }
