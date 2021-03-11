@@ -17,6 +17,7 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/yup": "^0.29.11",
     "babel-loader": "^8.2.2",
+    "cypress": "^6.6.0",
     "formik": "^2.2.6",
     "formik-material-ui": "^3.0.1",
     "html-webpack-plugin": "^5.3.1",
