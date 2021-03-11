@@ -11,7 +11,9 @@ module.exports = function (env, options) {
         template: path.resolve(__dirname, 'lib/index.html'),
       }),
     ],
+    devtool: 'inline-source-map',
     devServer: {
+      historyApiFallback: true,
       contentBase: path.resolve(__dirname, 'dist'),
       compress: true,
       port: 8080,

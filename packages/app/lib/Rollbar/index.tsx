@@ -28,6 +28,11 @@ export default function RollbarProvider({
     captureUnhandledRejections: true,
     payload: {
       environment: 'development',
+      person: {
+        id: 1,
+        email: 'nico.greco@outreach.io',
+        org: 'Outreach',
+      },
     },
   });
 

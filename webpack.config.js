@@ -6,6 +6,7 @@ module.exports = function (env, options, dirname) {
     output: {
       path: path.resolve(dirname, 'dist'),
       filename: 'main-[hash].js',
+      publicPath: '/',
     },
     resolve: {
       extensions: ['.js', '.jsx', '.tsx', '.ts'],
