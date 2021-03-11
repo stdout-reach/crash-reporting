@@ -1,1 +1,2 @@
-export { default } from './lib';
+export * from './lib/Types';
+export * from './lib/Parser';
