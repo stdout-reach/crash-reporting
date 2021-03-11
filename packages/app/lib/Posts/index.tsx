@@ -11,10 +11,12 @@ import {
 } from '@material-ui/core';
 
 import usePosts from '../Hooks/usePosts';
+import { useRollbar } from '../Rollbar';
 
 export default function Posts(): React.ReactElement {
   const [id, setId] = useState<number>(1);
   const post = usePosts(id);
+  const rollbar = useRollbar();
 
   return (
     <>
@@ -33,6 +35,7 @@ export default function Posts(): React.ReactElement {
           post: 1,
         }}
         onSubmit={(values) => {
+          rollbar.log('Crash Report: Fetching Posts');
           setId(values.post);
         }}
       >
