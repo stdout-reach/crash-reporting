@@ -96,7 +96,8 @@ interface NavigationTelemetryJsonObject extends TelemetryJsonObject {
 interface DomTelemetryJsonObject extends TelemetryJsonObject {
   type: 'dom';
   body: {
-    subtype: string;
+    subtype: 'click' | 'input';
+    element: string;
   };
 }
 
@@ -104,11 +105,11 @@ interface BodyJsonObject {
   message: {
     body: string;
   };
-  telemetry: {};
+  telemetry: TelemetryJsonObject[];
 }
 
 export interface TelemetryReportJsonObject {
-  body: any;
+  body: BodyJsonObject;
   timestamp: number;
   framework: string;
   platform: string;

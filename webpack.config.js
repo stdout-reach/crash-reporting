@@ -1,8 +1,8 @@
 const path = require('path');
 
-module.exports = function (env, options, dirname) {
+module.exports = function (_, options, dirname) {
   return {
-    mode: env,
+    mode: options.mode,
     output: {
       path: path.resolve(dirname, 'dist'),
       filename: 'main-[hash].js',

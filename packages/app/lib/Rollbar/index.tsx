@@ -3,10 +3,16 @@ import Rollbar from 'rollbar';
 
 import { Button } from '@material-ui/core';
 
+declare var AUTOMATED_TEST: any;
+
 const RollbarContext = React.createContext<Rollbar>(undefined);
 
 interface PropsWithChildren {
   children: React.ReactNode;
+}
+
+function noop(_: any[]): void {
+  return null;
 }
 
 export function useRollbar(): Rollbar {
@@ -16,12 +22,27 @@ export function useRollbar(): Rollbar {
     throw new Error('useRollbar can only be used inside a RollbarProvider');
   }
 
-  return rollbar;
+  if (!AUTOMATED_TEST) {
+    return rollbar;
+  } else {
+    return {
+      info: noop,
+      log: noop,
+      error: noop,
+      warn: noop,
+      warning: noop,
+      critical: noop,
+    } as Rollbar;
+  }
 }
 
 export default function RollbarProvider({
   children,
 }: PropsWithChildren): React.ReactElement {
+  if (AUTOMATED_TEST) {
+    return <>{children}</>;
+  }
+
   const rollbar = new Rollbar({
     accessToken: 'c934fda01afb41a796892b1c646c6b42',
     captureUncaught: true,

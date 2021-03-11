@@ -20,8 +20,9 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "webpack --mode=production",
-    "build:dev": "webpack --mode=development",
-    "start": "webpack serve --config webpack.config.js --mode=development"
+    "build:dev": "webpack --config webpack.config.js --mode=development",
+    "start": "webpack serve --config webpack.config.js --mode=development",
+    "start:test": "webpack serve --config webpack.config.js --mode=development --env test=true"
   },
   "bugs": {
     "url": "https://github.com/stdout-reach/crash-reporting/issues"

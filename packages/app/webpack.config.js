@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseConfig = require('../../webpack.config');
 const path = require('path');
+const { DefinePlugin } = require('webpack');
 
 module.exports = function (env, options) {
   return {
@@ -9,6 +10,10 @@ module.exports = function (env, options) {
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'lib/index.html'),
+      }),
+      new DefinePlugin({
+        ENVIRONMENT: options.mode,
+        AUTOMATED_TEST: env.test ?? false,
       }),
     ],
     devtool: 'inline-source-map',
