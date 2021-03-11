@@ -21,9 +21,14 @@
     "url": "git+https://github.com/stdout-reach/crash-reporting.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test:watch": "jest --watch",
+    "test": "jest"
   },
   "bugs": {
     "url": "https://github.com/stdout-reach/crash-reporting/issues"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.10",
+    "ts-node": "^9.1.1"
   }
 }

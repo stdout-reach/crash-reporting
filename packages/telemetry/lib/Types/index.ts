@@ -1,3 +1,5 @@
+import { TelemetryEvent } from 'rollbar';
+
 export interface Person {
   org: string;
   email: string;
@@ -17,13 +19,19 @@ export interface Plugins {
 export interface Client {
   screen: Screen;
   plugins: Plugins[];
-  cookies_enabled: boolean;
+  cookiesEnabled: boolean;
   language: string;
   browser: string;
 }
 
 export interface TelemetryReport {
-  body: any;
+  title: string;
+  telemetry: (
+    | NetworkTelemetryEventJsonObject
+    | LogTelemetryEventJsonObject
+    | DomTelemetryEventJsonObject
+    | NavigationTelemetryEventJsonObject
+  )[];
   timestamp: number;
   framework: string;
   platform: string;
@@ -37,13 +45,13 @@ export interface TelemetryReport {
   metadata: {};
 }
 
-interface PersonJsonObject {
+export interface PersonJsonObject {
   org: string;
   email: string;
   id: number;
 }
 
-interface ClientJsonObject {
+export interface ClientJsonObject {
   timestamp: number;
   javascript: {
     screen: Screen;
@@ -55,15 +63,13 @@ interface ClientJsonObject {
   runtime_ms: number;
 }
 
-interface TelemetryJsonObject {
+export interface TelemetryEventJsonObject extends TelemetryEvent {
   type: 'network' | 'log' | 'navigation' | 'dom';
-  level: 'debug' | 'info' | 'warning' | 'error' | 'critical';
-  timestamp: number;
   source: 'client';
-  body: object;
 }
 
-interface NetworkTelemetryJsonObject extends TelemetryJsonObject {
+export interface NetworkTelemetryEventJsonObject
+  extends TelemetryEventJsonObject {
   type: 'network';
   body: {
     end_time_ms: number;
@@ -77,7 +83,7 @@ interface NetworkTelemetryJsonObject extends TelemetryJsonObject {
   };
 }
 
-interface LogTelemetryJsonObject extends TelemetryJsonObject {
+export interface LogTelemetryEventJsonObject extends TelemetryEventJsonObject {
   type: 'log';
   body: {
     message: string;
@@ -85,7 +91,8 @@ interface LogTelemetryJsonObject extends TelemetryJsonObject {
   uuid: string;
 }
 
-interface NavigationTelemetryJsonObject extends TelemetryJsonObject {
+export interface NavigationTelemetryEventJsonObject
+  extends TelemetryEventJsonObject {
   type: 'navigation';
   body: {
     to: string;
@@ -93,7 +100,7 @@ interface NavigationTelemetryJsonObject extends TelemetryJsonObject {
   };
 }
 
-interface DomTelemetryJsonObject extends TelemetryJsonObject {
+export interface DomTelemetryEventJsonObject extends TelemetryEventJsonObject {
   type: 'dom';
   body: {
     subtype: 'click' | 'input';
@@ -101,11 +108,11 @@ interface DomTelemetryJsonObject extends TelemetryJsonObject {
   };
 }
 
-interface BodyJsonObject {
+export interface BodyJsonObject {
   message: {
     body: string;
   };
-  telemetry: TelemetryJsonObject[];
+  telemetry: TelemetryEventJsonObject[];
 }
 
 export interface TelemetryReportJsonObject {
