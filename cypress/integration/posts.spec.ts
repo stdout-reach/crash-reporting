@@ -1,17 +1,29 @@
 import {
-  TelemetryReport,
   parse,
   TelemetryReportJsonObject,
   NetworkTelemetryEventJsonObject,
   NavigationTelemetryEventJsonObject,
 } from '@cr/telemetry';
 
-describe('My First Test', () => {
+import posts from '../fixtures/posts.json';
+
+function getMockData(url: string): object {
+  if (url.startsWith('https://jsonplaceholder.typicode.com/posts/')) {
+    const index = parseInt(
+      url.substring('https://jsonplaceholder.typicode.com/posts/'.length),
+      10
+    );
+    return posts[index - 1];
+  }
+  return {};
+}
+
+describe('Executing the user session', () => {
   beforeEach(() => {
     cy.visit('http://localhost:8080');
   });
 
-  it('should read the report', async () => {
+  it('should read the report', () => {
     // const posts = 'posts-parsed.json';
     // const posts = 'posts-failed.json';
     const posts = '12-crash-report-failed-to-fetch.json';
@@ -25,7 +37,7 @@ describe('My First Test', () => {
           const networkEvent: NetworkTelemetryEventJsonObject = event;
           cy.interceptFetch(networkEvent.body.url, networkEvent.body.method, {
             status: networkEvent.body.status_code,
-            data: {}, // TODO, need mock data...
+            data: getMockData(networkEvent.body.url), // TODO, need mock data...
           });
           return; // do nothing else...
         }

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "title": "Post No. 1",
+    "body": "This is the first post"
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "title": "Post No. 2",
+    "body": "This is the second post"
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "title": "Post No. 3",
+    "body": "This is the third post"
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "title": "Post No. 4",
+    "body": "This is the fourth post"
+  },
+  {
+    "id": 5,
+    "userId": 1,
+    "title": "Post No. 5",
+    "body": "This is the fifth post"
+  },
+  {
+    "id": 6,
+    "userId": 1,
+    "title": "Post No. 6",
+    "body": "This is the sixth post"
+  },
+  {
+    "id": 7,
+    "userId": 1,
+    "title": "Post No. 7",
+    "body": "This is the seventh post"
+  },
+  {
+    "id": 8,
+    "userId": 1,
+    "title": "Post No. 8",
+    "body": "This is the eighth post"
+  }
+]
