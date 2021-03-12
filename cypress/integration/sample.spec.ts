@@ -11,24 +11,6 @@ describe('My First Test', () => {
     cy.visit('http://localhost:8080');
   });
 
-  it.skip('visits the home page', () => {
-    cy.interceptFetch(
-      'https://jsonplaceholder.typicode.com/posts/1',
-      'GET',
-      {
-        status: 200,
-        data: {
-          id: 1,
-          title: 'Hello, World',
-          body: 'Body of the response....',
-          userId: 1,
-        },
-      },
-      3000
-    );
-    cy.navigateTo('posts');
-  });
-
   it('should read the report', async () => {
     // const posts = 'posts-parsed.json';
     // const posts = 'posts-failed.json';
