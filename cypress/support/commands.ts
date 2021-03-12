@@ -53,6 +53,11 @@ declare global {
       ): void;
 
       readReport<T>(fileName: string): Chainable<T>;
+
+      controlledInputChange(
+        input: JQuery<HTMLElement>,
+        value: string
+      ): Chainable<Element>;
     }
   }
 }
@@ -113,6 +118,25 @@ Cypress.Commands.add(
 Cypress.Commands.add('readReport', (fileName: string) => {
   return cy.readFile(`cypress/reports/${fileName}`, 'utf8');
 });
+
+Cypress.Commands.add(
+  'controlledInputChange',
+  (input: string, value: string) => {
+    const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+      window.HTMLInputElement.prototype,
+      'value'
+    ).set;
+
+    const changeInputValue = (inputToChange) => (newValue) => {
+      nativeInputValueSetter.call(inputToChange[0], newValue);
+      inputToChange[0].dispatchEvent(
+        new Event('change', { newValue, bubbles: true })
+      );
+    };
+
+    return cy.get(input).then((input) => changeInputValue(input)(value));
+  }
+);
 
 // Convert this to a module instead of script (allows import/export)
 export {};

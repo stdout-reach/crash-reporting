@@ -32,7 +32,7 @@ export default function Posts(): React.ReactElement {
       <Divider />
       <Formik
         initialValues={{
-          post: 1,
+          post: id,
         }}
         onSubmit={(values) => {
           rollbar.log('Crash Report: Fetching Posts');

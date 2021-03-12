@@ -13,7 +13,9 @@ function getMockData(url: string): object {
       url.substring('https://jsonplaceholder.typicode.com/posts/'.length),
       10
     );
-    return posts[index - 1];
+    const post = posts[index - 1];
+    console.log(post);
+    return { ...post };
   }
   return {};
 }
@@ -66,16 +68,14 @@ describe('Executing the user session', () => {
         }
         if (event.type === 'dom') {
           // Do a dom action
-          const element = cy.get(`${event.body.element}`);
           if (event.body.subtype === 'click') {
             // Do a click command
-            element.click();
+            cy.get(`${event.body.element}`).click();
           } else {
             // Do an input command
-            element
-              .invoke('val', event.body.value)
-              .trigger('change')
-              .trigger('input');
+            cy.get(`${event.body.element}`).then((input) => {
+              cy.controlledInputChange(input, event.body.value);
+            });
           }
         }
         if (event.type === 'log') {
