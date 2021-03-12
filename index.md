@@ -44,3 +44,7 @@ The result of this would be a view that presents all of the matching items for o
 Once viewed, we want the Raw JSON.
 
 ![Rollbar Notification Email](images/rollbar-view.png)
+
+And finally, we read the file in our Cypress test run.
+
+![Gif](images/cypress-automation-run.gif)
