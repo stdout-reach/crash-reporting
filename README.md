@@ -39,3 +39,17 @@ yarn bootstrap
 ```shell
 yarn start
 ```
+
+### Reports
+
+Reports are fetched from Rollbar using RQL
+A standard query to run could be...
+
+```sql
+SELECT *
+FROM item_occurrence
+WHERE person.email = "name@email.com" AND item.title = "Title to look for"
+ORDER BY timestamp DESC
+```
+
+This repo does not support programmatic searches so a manual query must be run in the Rollbar dashboard, from there a JSON file may be copy/pasted into the `cypress/reports` directory.

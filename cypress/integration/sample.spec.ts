@@ -30,10 +30,11 @@ describe('My First Test', () => {
   });
 
   it('should read the report', async () => {
-    const postParsed = 'posts-parsed.json';
-    const postsFailed = '12-crash-report-failed-to-fetch.json';
+    // const posts = 'posts-parsed.json';
+    // const posts = 'posts-failed.json';
+    const posts = '12-crash-report-failed-to-fetch.json';
 
-    cy.readReport<TelemetryReportJsonObject>(postsFailed).then((r) => {
+    cy.readReport<TelemetryReportJsonObject>(posts).then((r) => {
       const report = parse(r);
 
       report.telemetry.forEach((event) => {
