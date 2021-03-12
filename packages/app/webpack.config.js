@@ -13,7 +13,7 @@ module.exports = function (env, options) {
       }),
       new DefinePlugin({
         ENVIRONMENT: options.mode,
-        AUTOMATED_TEST: env.test ?? false,
+        AUTOMATED_TEST: env.automation ?? false,
       }),
     ],
     devtool: 'inline-source-map',

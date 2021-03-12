@@ -14,6 +14,10 @@ export default function parse(
   const report: TelemetryReport = {
     title: json.body.message.body,
     telemetry: [],
+    request: {
+      url: json.request.url,
+      queryString: json.request.query_string,
+    },
     timestamp: json.timestamp,
     framework: json.framework,
     platform: json.platform,
@@ -37,7 +41,9 @@ export default function parse(
     switch (event.type) {
       case 'dom': {
         // create dom event
-        report.telemetry.push({ ...event } as DomTelemetryEventJsonObject);
+        const domEvent = { ...event } as DomTelemetryEventJsonObject;
+        domEvent.body.element = domEvent.body.element.substring(6);
+        report.telemetry.push(domEvent);
         return;
       }
       case 'log': {

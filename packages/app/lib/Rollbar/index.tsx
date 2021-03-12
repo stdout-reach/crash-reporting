@@ -18,11 +18,10 @@ function noop(_: any[]): void {
 export function useRollbar(): Rollbar {
   const rollbar = React.useContext(RollbarContext);
 
-  if (!rollbar) {
-    throw new Error('useRollbar can only be used inside a RollbarProvider');
-  }
-
   if (!AUTOMATED_TEST) {
+    if (!rollbar) {
+      throw new Error('useRollbar can only be used inside a RollbarProvider');
+    }
     return rollbar;
   } else {
     return {

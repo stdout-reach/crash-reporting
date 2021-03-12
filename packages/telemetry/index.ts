@@ -1,2 +1,2 @@
 export * from './lib/Types';
-export * from './lib/Parser';
+export { default as parse } from './lib/Parser';

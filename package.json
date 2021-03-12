@@ -6,7 +6,8 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "start": "yarn workspace @cr/app start"
+    "start": "yarn workspace @cr/app start",
+    "start:automation": "yarn workspace @cr/app start:automation"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",

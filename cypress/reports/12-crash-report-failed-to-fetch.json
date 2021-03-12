@@ -1,0 +1,701 @@
+{
+  "body": {
+    "message": {
+      "body": "Crash Report: Failed to fetch"
+    },
+    "telemetry": [
+      {
+        "body": {
+          "message": "Crash Report: Fetching Posts"
+        },
+        "uuid": "46d21401-8bb6-49b2-e556-3b432b5a5a26",
+        "level": "debug",
+        "timestamp_ms": 1615425223038,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425223142,
+          "url": "https://jsonplaceholder.typicode.com/posts/1",
+          "status_code": 200,
+          "start_time_ms": 1615425223044,
+          "response_content_type": "application/json; charset=utf-8",
+          "subtype": "fetch",
+          "method": "GET"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425223044,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425223095,
+          "url": "http://localhost:8080/sockjs-node/info?t=1615425223068",
+          "status_code": 200,
+          "start_time_ms": 1615425223069,
+          "response_content_type": "application/json; charset=UTF-8",
+          "subtype": "xhr",
+          "method": "GET"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425223095,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "message": "[WDS] Live Reloading enabled."
+        },
+        "source": "client",
+        "timestamp_ms": 1615425223115,
+        "type": "log",
+        "level": "info"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Posts Fetched"
+        },
+        "uuid": "50a91dbd-86df-4f86-cbab-e796a48b19c3",
+        "level": "debug",
+        "timestamp_ms": 1615425223142,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Posts Parsed"
+        },
+        "uuid": "05685141-f447-45db-b232-32add41d201b",
+        "level": "debug",
+        "timestamp_ms": 1615425223148,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425223236,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425223042,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425223236,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425223272,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425223146,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425223271,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425223272,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425223151,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425223272,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "subtype": "click",
+          "element": "... > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary[type=\"submit\"]"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425236875,
+        "type": "dom",
+        "level": "info"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Fetching Posts"
+        },
+        "uuid": "f075ee79-5084-4b2a-d31b-8bd8c8845ba8",
+        "level": "debug",
+        "timestamp_ms": 1615425236883,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Fetching Posts"
+        },
+        "uuid": "d29cac7f-1bec-48cb-c2be-af3cee25ffa9",
+        "level": "debug",
+        "timestamp_ms": 1615425236906,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425236970,
+          "url": "https://jsonplaceholder.typicode.com/posts/2",
+          "status_code": 200,
+          "start_time_ms": 1615425236911,
+          "response_content_type": "application/json; charset=utf-8",
+          "subtype": "fetch",
+          "method": "GET"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425236911,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Posts Fetched"
+        },
+        "uuid": "64ee99d5-72e2-4e3e-dd63-63a1578edf05",
+        "level": "debug",
+        "timestamp_ms": 1615425236970,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Posts Parsed"
+        },
+        "uuid": "9ab476e9-30fb-4c6a-e211-c4bf1f1dec9c",
+        "level": "debug",
+        "timestamp_ms": 1615425236977,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425237067,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425236899,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425237067,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425237086,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425236910,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425237085,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425237089,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425236981,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425237088,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425237089,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425236975,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425237089,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "subtype": "input",
+          "value": "2",
+          "element": "... > input#post.MuiInputBase-input.MuiInput-input[type=\"text\"][name=\"post\"]"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425237698,
+        "type": "dom",
+        "level": "info"
+      },
+      {
+        "body": {
+          "subtype": "click",
+          "element": "... > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary[type=\"submit\"]"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425250023,
+        "type": "dom",
+        "level": "info"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Fetching Posts"
+        },
+        "uuid": "d3471311-1619-4a0a-958e-85f546cdbc4d",
+        "level": "debug",
+        "timestamp_ms": 1615425250032,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Fetching Posts"
+        },
+        "uuid": "d822f80b-2f94-402e-e034-1abe70562440",
+        "level": "debug",
+        "timestamp_ms": 1615425250044,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425250119,
+          "url": "https://jsonplaceholder.typicode.com/posts/4",
+          "status_code": 200,
+          "start_time_ms": 1615425250051,
+          "response_content_type": "application/json; charset=utf-8",
+          "subtype": "fetch",
+          "method": "GET"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425250051,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Posts Fetched"
+        },
+        "uuid": "ab7a08ac-e1c7-4e62-e279-8c95bd208ea1",
+        "level": "debug",
+        "timestamp_ms": 1615425250119,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Posts Parsed"
+        },
+        "uuid": "dcc06d38-6432-4a81-8782-f6676654486b",
+        "level": "debug",
+        "timestamp_ms": 1615425250128,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425250245,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425250049,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425250244,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425250251,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425250038,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425250251,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425250252,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425250125,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425250252,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425250270,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425250134,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425250269,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "subtype": "input",
+          "value": "4",
+          "element": "... > input#post.MuiInputBase-input.MuiInput-input[type=\"text\"][name=\"post\"]"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425251973,
+        "type": "dom",
+        "level": "info"
+      },
+      {
+        "body": {
+          "subtype": "click",
+          "element": "... > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary[type=\"submit\"]"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425261053,
+        "type": "dom",
+        "level": "info"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Fetching Posts"
+        },
+        "uuid": "97768204-0b29-4a31-9b69-ee43109ea90e",
+        "level": "debug",
+        "timestamp_ms": 1615425261060,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Fetching Posts"
+        },
+        "uuid": "f33c59c7-77a2-4229-dbf2-ad7c35558aeb",
+        "level": "debug",
+        "timestamp_ms": 1615425261072,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425261163,
+          "url": "https://jsonplaceholder.typicode.com/posts/5",
+          "status_code": 200,
+          "start_time_ms": 1615425261082,
+          "response_content_type": "application/json; charset=utf-8",
+          "subtype": "fetch",
+          "method": "GET"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425261082,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Posts Fetched"
+        },
+        "uuid": "c1efe46b-062a-4c6e-cd52-8946392bb727",
+        "level": "debug",
+        "timestamp_ms": 1615425261163,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Posts Parsed"
+        },
+        "uuid": "c29fd6cc-a474-4fb7-ac08-1207a06946fc",
+        "level": "debug",
+        "timestamp_ms": 1615425261172,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425261267,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425261081,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425261267,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425261276,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425261170,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425261275,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425261276,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425261067,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425261275,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425261276,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425261180,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425261275,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "subtype": "input",
+          "value": "5",
+          "element": "... > input#post.MuiInputBase-input.MuiInput-input[type=\"text\"][name=\"post\"]"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425262411,
+        "type": "dom",
+        "level": "info"
+      },
+      {
+        "body": {
+          "subtype": "click",
+          "element": "... > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary[type=\"submit\"]"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425275031,
+        "type": "dom",
+        "level": "info"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Fetching Posts"
+        },
+        "uuid": "92a53853-b53d-4633-fbea-e294b1e9616d",
+        "level": "debug",
+        "timestamp_ms": 1615425275038,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Fetching Posts"
+        },
+        "uuid": "64a11032-1dd5-4195-b151-ce2aacd12b04",
+        "level": "debug",
+        "timestamp_ms": 1615425275055,
+        "source": "client",
+        "type": "log"
+      },
+      {
+        "body": {
+          "end_time_ms": null,
+          "url": "https://jsonplaceholder-wrong-url.typicode.com/posts/6",
+          "status_code": null,
+          "start_time_ms": 1615425275065,
+          "subtype": "fetch",
+          "method": "GET"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425275065,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425275229,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425275049,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425275229,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "end_time_ms": 1615425275247,
+          "url": "https://api.rollbar.com:443/api/1/item/",
+          "status_code": 200,
+          "start_time_ms": 1615425275064,
+          "response_content_type": "application/json; charset=utf-8",
+          "request_content_type": "application/json",
+          "subtype": "xhr",
+          "method": "POST"
+        },
+        "source": "client",
+        "timestamp_ms": 1615425275246,
+        "type": "network",
+        "level": "info"
+      },
+      {
+        "body": {
+          "message": "Crash Report: Failed to fetch"
+        },
+        "uuid": "78ce8517-f953-4c7c-c19d-afda67b28224",
+        "level": "error",
+        "timestamp_ms": 1615425275328,
+        "source": "client",
+        "type": "log"
+      }
+    ]
+  },
+  "timestamp": 1615425275,
+  "framework": "browser-js",
+  "platform": "browser",
+  "endpoint": "api.rollbar.com/api/1/item/",
+  "uuid": "78ce8517-f953-4c7c-c19d-afda67b28224",
+  "language": "javascript",
+  "level": "error",
+  "request": {
+    "url": "http://localhost:8080/posts",
+    "query_string": "",
+    "user_ip": "24.16.230.92"
+  },
+  "server": {},
+  "environment": "development",
+  "person": {
+    "org": "Outreach",
+    "id": 1,
+    "email": "nico.greco@outreach.io"
+  },
+  "client": {
+    "timestamp": 1615425275,
+    "javascript": {
+      "screen": {
+        "width": 1792,
+        "height": 1120
+      },
+      "plugins": [
+        {
+          "name": "Chrome PDF Plugin",
+          "description": "Portable Document Format"
+        },
+        {
+          "name": "Chrome PDF Viewer",
+          "description": ""
+        },
+        {
+          "name": "Native Client",
+          "description": ""
+        }
+      ],
+      "cookie_enabled": true,
+      "language": "en-GB",
+      "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36"
+    },
+    "runtime_ms": 52421
+  },
+  "context": "",
+  "notifier": {
+    "version": "2.21.0",
+    "name": "rollbar-browser-js",
+    "diagnostic": {
+      "original_arg_types": [
+        "string"
+      ]
+    },
+    "configured_options": {
+      "captureUncaught": true,
+      "captureUnhandledRejections": true,
+      "payload": {
+        "environment": "development",
+        "person": {
+          "org": "Outreach",
+          "id": 1,
+          "email": "nico.greco@outreach.io"
+        }
+      }
+    }
+  },
+  "metadata": {}
+}

@@ -24,6 +24,11 @@ export interface Client {
   browser: string;
 }
 
+export interface Request {
+  url: string;
+  queryString: string;
+}
+
 export interface TelemetryReport {
   title: string;
   telemetry: (
@@ -32,6 +37,7 @@ export interface TelemetryReport {
     | DomTelemetryEventJsonObject
     | NavigationTelemetryEventJsonObject
   )[];
+  request: Request;
   timestamp: number;
   framework: string;
   platform: string;
@@ -74,7 +80,7 @@ export interface NetworkTelemetryEventJsonObject
   body: {
     end_time_ms: number;
     url: string;
-    status_code: number;
+    status_code: 200 | 401 | 403 | 404 | 405 | 500 | 501 | 502 | 503;
     start_time_ms: number;
     response_content_type: string;
     request_content_type: string;
@@ -105,6 +111,7 @@ export interface DomTelemetryEventJsonObject extends TelemetryEventJsonObject {
   body: {
     subtype: 'click' | 'input';
     element: string;
+    value?: string;
   };
 }
 
