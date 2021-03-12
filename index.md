@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+# Crash Team Automation
 
-You can use the [editor on GitHub](https://github.com/stdout-reach/crash-reporting/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+CTA, has built a new tool to parse through Telemetry events recorded by Rollbar and transforms them into valid Cypress commands in order to provide QA Engineers and Software Engineers with a seamless visual represenation of the exact session undertaken by an end user.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Why?
 
-### Markdown
+Logging is something that tends to be a drag, parsing through logs, and playing out situations in your head only goes so far. Bottom line is that repo steps are always needed when a bug is reported. This means manually going to development regions or spinning up a local development environment and attempting to recreate the steps needed to trigger the defect. This is not without its issues...
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+> What if the user didn't report all the steps taken correctly? Or worse...what if the user decides it is not their job to report bugs.
 
-```markdown
-Syntax highlighted code block
+Then comes the question. What if instead of having to imagine what the user is going through. What if we could just see exactly what the user saw at any given point during their session?
 
-# Header 1
-## Header 2
-### Header 3
+**Web automation software already exists, and plenty of event logging services already exists, so why not put the two together?**
 
-- Bulleted
-- List
+> Think of it as _almost_ being able to stand over the shoulder of your end user.
 
-1. Numbered
-2. List
+## How?
 
-**Bold** and _Italic_ and `Code` text
+This project accepts Rollbar Telemetry Events in JSON form, and parses them into Typescript Objects. These Typescript Objects serve as then used to construct Cypress commands. Cypress then executes each event one by one until all events have been used up. At that point, the test run is over.
 
-[Link](url) and ![Image](src)
+## The Process
+
+It starts with a simple email notification
+
+![Rollbar Notification Email](images/rollbar-notification-email.png)
+
+Here we see the title for this error is "Crash Report: Failed to fetch"
+
+Knowing both the title of this error and the person's email we can query for all the Telemetry Events that lead up to this notification being triggered.
+
+A simple query I would typically run would be something like this...
+
+```SQL
+SELECT *
+FROM item_occurrence
+WHERE person.email = "person@email.com" AND item.title = "Crash Report: Failed to fetch"
+ORDER BY timestamp DESC
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+The result of this would be a view that presents all of the matching items for our query. We can view any one of these.
 
-### Jekyll Themes
+![Rollbar Notification Email](images/rollbar-query.png)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/stdout-reach/crash-reporting/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Once viewed, we want the Raw JSON.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+![Rollbar Notification Email](images/rollbar-view.png)
